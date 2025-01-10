@@ -25,6 +25,13 @@ class MainWindow(qtw.QWidget):
         self.my_combo.addItem("Cheese")#here we can also add a list, each element will be added separately
         self.my_combo.insertItem(2,"third thing")#here first is the pos and second is the item name
 
+        #create a spinn box
+        self.my_spin = qtw.QSpinBox(self,value = 10,maximum = 100,minimum = 0,singleStep = 5,
+                                    prefix ="#",suffix = "Order")
+        self.my_spin.setFont(qtg.QFont('Arial', 24))
+        
+
+
         # Create an entry box
         self.my_entry = qtw.QLineEdit()
         self.my_entry.setObjectName("name_field")
@@ -38,13 +45,14 @@ class MainWindow(qtw.QWidget):
         self.layout().addWidget(self.my_combo)
         self.layout().addWidget(self.my_entry)
         self.layout().addWidget(self.my_button)
+        self.layout().addWidget(self.my_spin)
 
         # Show the main window
         self.show()
 
     def press_it(self):
         # Update the label with the selected item in the combo box
-        self.my_label.setText(f'You picked -- {self.my_combo.currentText()}')
+        self.my_label.setText(f'You picked -- {self.my_spin.value()}')
         #currentindex will print the index value(0-based)
 
 
