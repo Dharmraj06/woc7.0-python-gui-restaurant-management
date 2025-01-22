@@ -33,7 +33,7 @@ class MainWindow(qtw.QWidget):
         self.my_entry.setText("")
 
         # Create a button
-        self.my_button = qtw.QPushButton("Press", clicked=self.press_it,)
+        self.my_button = qtw.QPushButton("Press", clicked=self.press_it())
 
         # Add widgets to the layout (in a logical order)
         self.layout().addWidget(self.my_label)
