@@ -27,133 +27,156 @@ class Ui_MainWindow(object):
         self.output_label.setFrameShadow(QtWidgets.QFrame.Raised)
         self.output_label.setLineWidth(4)
         self.output_label.setMidLineWidth(0)
-        self.output_label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.output_label.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.output_label.setObjectName("output_label")
-        self.percent_pb = QtWidgets.QPushButton(self.centralwidget,clicked =  lambda: self.press_it("%"))
+
+        self.percent_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("%"))
         self.percent_pb.setGeometry(QtCore.QRect(10, 110, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.percent_pb.setFont(font)
         self.percent_pb.setObjectName("percent_pb")
-        self.backslash_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("/"))
+
+        self.backslash_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("/"))
         self.backslash_pb.setGeometry(QtCore.QRect(280, 110, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.backslash_pb.setFont(font)
         self.backslash_pb.setObjectName("backslash_pb")
-        self.C_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("C"))
+
+        self.C_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("C"))
         self.C_pb.setGeometry(QtCore.QRect(100, 110, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.C_pb.setFont(font)
         self.C_pb.setObjectName("C_pb")
-        self.back_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it(""))
+
+        self.back_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("<<"))
         self.back_pb.setGeometry(QtCore.QRect(190, 110, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.back_pb.setFont(font)
         self.back_pb.setObjectName("back_pb")
-        self.seven_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("7"))
+
+        self.seven_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("7"))
         self.seven_pb.setGeometry(QtCore.QRect(10, 200, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.seven_pb.setFont(font)
         self.seven_pb.setObjectName("seven_pb")
-        self.multiply_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("*"))
+
+        self.multiply_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("*"))
         self.multiply_pb.setGeometry(QtCore.QRect(280, 200, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.multiply_pb.setFont(font)
         self.multiply_pb.setObjectName("multiply_pb")
-        self.seven_pb_2 = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("7"))
+
+        self.seven_pb_2 = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("7"))
         self.seven_pb_2.setGeometry(QtCore.QRect(190, 200, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.seven_pb_2.setFont(font)
         self.seven_pb_2.setObjectName("seven_pb_2")
-        self.eight_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("8"))
+
+        self.eight_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("8"))
         self.eight_pb.setGeometry(QtCore.QRect(100, 200, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.eight_pb.setFont(font)
         self.eight_pb.setObjectName("eight_pb")
-        self.one_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("1"))
+
+        self.one_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("1"))
         self.one_pb.setGeometry(QtCore.QRect(10, 380, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.one_pb.setFont(font)
         self.one_pb.setObjectName("one_pb")
-        self.plus_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("+"))
+
+        self.plus_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("+"))
         self.plus_pb.setGeometry(QtCore.QRect(280, 380, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.plus_pb.setFont(font)
         self.plus_pb.setObjectName("plus_pb")
-        self.three_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("3"))
+
+        self.three_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("3"))
         self.three_pb.setGeometry(QtCore.QRect(190, 380, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.three_pb.setFont(font)
         self.three_pb.setObjectName("three_pb")
-        self.two_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("2"))
+
+        self.two_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("2"))
         self.two_pb.setGeometry(QtCore.QRect(100, 380, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.two_pb.setFont(font)
         self.two_pb.setObjectName("two_pb")
-        self.four_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("4"))
+
+        self.four_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("4"))
         self.four_pb.setGeometry(QtCore.QRect(10, 290, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.four_pb.setFont(font)
         self.four_pb.setObjectName("four_pb")
-        self.minus_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("-"))
+
+        self.minus_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("-"))
         self.minus_pb.setGeometry(QtCore.QRect(280, 290, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.minus_pb.setFont(font)
         self.minus_pb.setObjectName("minus_pb")
-        self.six_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("6"))
+
+        self.six_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("6"))
         self.six_pb.setGeometry(QtCore.QRect(190, 290, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.six_pb.setFont(font)
         self.six_pb.setObjectName("six_pb")
-        self.five_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("5"))
+
+        self.five_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("5"))
         self.five_pb.setGeometry(QtCore.QRect(100, 290, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.five_pb.setFont(font)
         self.five_pb.setObjectName("five_pb")
-        self.plusminus_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("-/+"))
+
+        self.plusminus_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("-/+"))
         self.plusminus_pb.setGeometry(QtCore.QRect(10, 460, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.plusminus_pb.setFont(font)
         self.plusminus_pb.setObjectName("plusminus_pb")
-        self.equal_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("="))
+
+        self.equal_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("="))
         self.equal_pb.setGeometry(QtCore.QRect(280, 460, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.equal_pb.setFont(font)
         self.equal_pb.setObjectName("equal_pb")
-        self.deicmalpb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("."))
+
+        self.deicmalpb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.dot_it())
         self.deicmalpb.setGeometry(QtCore.QRect(190, 460, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.deicmalpb.setFont(font)
         self.deicmalpb.setObjectName("deicmalpb")
-        self.zero_pb = QtWidgets.QPushButton(self.centralwidget,clicked = lambda: self.press_it("0"))
+
+        self.zero_pb = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("0"))
         self.zero_pb.setGeometry(QtCore.QRect(100, 460, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.zero_pb.setFont(font)
         self.zero_pb.setObjectName("zero_pb")
+
         MainWindow.setCentralWidget(self.centralwidget)
+
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 364, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
+
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
@@ -161,15 +184,33 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+    def dot_it(self):
+        output_str = self.output_label.text()
+        if '.' in output_str:
+            pass
+        else:
+            self.output_label.setText(f"{output_str}.")
 
-    def press_it(self,pressed):
+
+    def press_it(self, pressed):
         if pressed == "C":
             self.output_label.setText("0")
+
         else:
             if self.output_label.text() == "0":
                 self.output_label.setText("")
-            self.output_label.setText(f"{self.output_label.text()}{pressed}")
 
+            elif pressed == '<<':  # creating a function which makes sure that '<<' works
+                old_output_str = self.output_label.text()
+                new_output_str = old_output_str[:-1]
+                self.output_label.setText(f"{new_output_str}")
+                return
+            elif pressed == '-/+':
+                output_str = self.output_label.text()
+                if output_str[0] != '-':
+                    self.output_label.setText(f"-{output_str}")
+                return
+            self.output_label.setText(f"{self.output_label.text()}{pressed}")
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -199,6 +240,7 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
