@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>recipe_win</class>
+ <widget class="QMainWindow" name="recipe_win">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>852</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add Recipe</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="cancel_pb">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>510</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="price_label">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>100</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semil</family>
+      <pointsize>14</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Price(₹) : </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_1">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>450</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semil</family>
+      <pointsize>12</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Raw material :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="recipe_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Light</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_recipe_pb">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>510</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Add Recipe</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="recipe_label">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>10</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semil</family>
+      <pointsize>14</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Recipe Name : </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="price_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>110</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Light</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="type_label">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>60</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semil</family>
+      <pointsize>14</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Type</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="type_comboBox">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>60</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semib</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>Appetizers </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> Main Courses</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Side Dishes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Beverages </string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QListView" name="recipe_list">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>180</y>
+      <width>421</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListView" name="quant_list_2">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>180</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_rm_pb">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>510</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Add Raw Material</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="rm_comboBox">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>450</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semib</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Quant_label">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>150</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semil</family>
+      <pointsize>14</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Quantity(in kg/L) : </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="name_label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>150</y>
+      <width>421</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semil</family>
+      <pointsize>14</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Raw Material</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="quant_label">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>450</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semil</family>
+      <pointsize>12</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Quantity(in kg/L) : </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="quant_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>450</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Light</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>852</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

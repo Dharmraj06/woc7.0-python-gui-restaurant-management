@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menu_win</class>
+ <widget class="QMainWindow" name="menu_win">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>841</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menu</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="logo_label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>20</y>
+      <width>221</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Light</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    border: 2px solid rgb(112, 172, 198);  
+    padding: 10px;            
+    border-radius: 15px;     
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Logo</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>80</y>
+      <width>189</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semib</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Restaurant Name </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QListView" name="item_list">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>230</y>
+      <width>541</width>
+      <height>321</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="price_label">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>190</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Semilig</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Price</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QListView" name="price_list">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>230</y>
+      <width>91</width>
+      <height>321</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="type_comboBox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>190</y>
+      <width>541</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semib</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>Appetizers </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> Main Courses</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Side Dishes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Beverages </string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>841</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWin</class>
+ <widget class="QMainWindow" name="MainWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>926</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <property name="tabletTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Check-Mate</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="tabletTracking">
+    <bool>false</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">##background-color: #2E2E2E; color: white;</string>
+   </property>
+   <widget class="QComboBox" name="theme">
+    <property name="geometry">
+     <rect>
+      <x>772</x>
+      <y>15</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semil</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    background: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.597, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.426316 rgba(25, 116, 159, 199), 
+    stop:0.994737 rgba(49, 118, 150, 0)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}
+
+
+QComboBox QAbstractItemView {
+    font: 9pt &quot;Segoe UI Variable Text&quot;;
+    background-color:rgb(121, 186, 214) ; 
+    color: rgb(0, 0, 0); 
+
+}
+</string>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string>Light</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Light</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dark</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="theme_label">
+    <property name="geometry">
+     <rect>
+      <x>702</x>
+      <y>10</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, stop:0.0631579 rgba(0, 115, 168, 216), stop:0.448864 rgba(14, 116, 163, 227), stop:0.653409 rgba(25, 116, 159, 199), stop:0.8125 rgba(35, 117, 155, 191), stop:0.982955 rgba(49, 118, 150, 185));
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); /* Black border with some transparency */
+    border-radius: 15px; /* Rounded corners */
+color: #FFFAF0; 
+    padding-left: 10px; /* Adds padding on the left side */
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Theme:</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="name_label">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>50</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+
+	background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, stop:0.0631579 rgba(0, 115, 168, 216), stop:0.448864 rgba(14, 116, 163, 227), stop:0.653409 rgba(25, 116, 159, 199), stop:0.8125 rgba(35, 117, 155, 191), stop:0.982955 rgba(49, 118, 150, 185));
+   
+    color: #FFFAF0;  
+   
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 30px;           
+}
+
+
+
+++++</string>
+    </property>
+    <property name="text">
+     <string>Restaurant Name</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QFrame" name="v_line">
+    <property name="geometry">
+     <rect>
+      <x>435</x>
+      <y>420</y>
+      <width>61</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame::VLine {
+    border: none;
+    background:rgb(49, 131, 169);
+    width: 7px;  /* You can adjust the width of the vertical line here */
+}
+
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::VLine</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QFrame" name="h_line">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>420</y>
+      <width>761</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame::VLine {
+    border: none;
+    background-color: white;
+    width: 7px;  /* You can adjust the width of the vertical line here */
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::HLine</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <widget class="QPushButton" name="bill_pb">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>281</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Variable Small</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 20px;           
+    border: 2px solid rgb(112, 172, 198);  
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>BILLINGS AND ACCOUNTS</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="inven_pb">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>90</y>
+       <width>281</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Variable Small</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 20px;           
+    border: 2px solid rgb(112, 172, 198);  
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>INVENTORY</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="menu_pb">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>80</y>
+       <width>261</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Variable Small</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 20px;           
+    border: 2px solid rgb(112, 172, 198);  
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>MENU</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="raw_m_pb">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>10</y>
+       <width>261</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Variable Small</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 20px;           
+    border: 2px solid rgb(112, 172, 198);  
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>RAW MATERIAL</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>245</x>
+      <y>110</y>
+      <width>431</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Screenshot 2025-01-29 022441.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="edit_det_pb">
+    <property name="geometry">
+     <rect>
+      <x>335</x>
+      <y>360</y>
+      <width>261</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 20px;           
+    border: 2px solid rgb(112, 172, 198);  
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>EDIT DETAILS</string>
+    </property>
+   </widget>
+   <zorder>h_line</zorder>
+   <zorder>v_line</zorder>
+   <zorder>theme_label</zorder>
+   <zorder>theme</zorder>
+   <zorder>name_label</zorder>
+   <zorder>label</zorder>
+   <zorder>edit_det_pb</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

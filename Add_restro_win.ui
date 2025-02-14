@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>New_restro</class>
+ <widget class="QMainWindow" name="New_restro">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>776</width>
+    <height>588</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>New Restaurant</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="logo_label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>40</y>
+      <width>261</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Light</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    border: 2px solid rgb(112, 172, 198);  
+    padding: 10px;            
+    border-radius: 15px;     
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Logo</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_logo_pb">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>120</y>
+      <width>281</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Semilig</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 14px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 30px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  /* Darker version of the gradient */
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Add Logo</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>300</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Light</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>360</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Light</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>420</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Light</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancel_pb">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>490</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  /* Darker version of the gradient */
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_restro_pb">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>490</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  /* Darker version of the gradient */
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Add To List</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>280</y>
+      <width>178</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Display Semil</family>
+      <pointsize>14</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_1">
+       <property name="font">
+        <font>
+         <family>Segoe UI Variable Display Semil</family>
+         <pointsize>14</pointsize>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="text">
+        <string>Restaurant Name :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Segoe UI Variable Display Semil</family>
+         <pointsize>14</pointsize>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="text">
+        <string>GST Number :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>Segoe UI Variable Display Semil</family>
+         <pointsize>14</pointsize>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="text">
+        <string>FSSAI Number : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>776</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
