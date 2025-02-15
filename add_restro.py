@@ -12,7 +12,7 @@ class AddRestroWindow(QMainWindow):
         ui_file = "Add_restro_win.ui"
         uic.loadUi(ui_file, self)
 
-        # Set window title
+
         self.setWindowTitle("Add Restaurant Details")
 
         # Get widgets
@@ -41,7 +41,7 @@ class AddRestroWindow(QMainWindow):
             self.selected_logo_path = file_name  # Store selected image path
 
     def save_restaurant_data(self):
-        name = self.name_edit.text().strip()
+        name = self.name_edit.text().strip()#strip removes the unwanted spaces
         gstin = self.gstin_edit.text().strip()
         fssai = self.fssai_edit.text().strip()
 
@@ -58,12 +58,11 @@ class AddRestroWindow(QMainWindow):
         logo_folder = os.path.join(os.getcwd(), "restro_logos")
         os.makedirs(logo_folder, exist_ok=True)
 
-        # Save the image in the logo folder with a unique name
-        logo_filename = f"{name.replace(' ', '_')}.png"  # Rename logo using restaurant name
+        logo_filename = f"{name.replace(' ', '_')}.png"
         saved_logo_path = os.path.join(logo_folder, logo_filename)
-        shutil.copy(self.selected_logo_path, saved_logo_path)  # Copy image to storage folder
+        shutil.copy(self.selected_logo_path, saved_logo_path)
 
-        # Prepare restro_data
+        # restro_data
         restro_data = {
             "Name": name,
             "gstin": gstin,
@@ -71,10 +70,8 @@ class AddRestroWindow(QMainWindow):
             "Logo": saved_logo_path  # Store image path in JSON
         }
 
-        # File path for storing restaurant details
         file_path = os.path.join(os.getcwd(), "restro_details.json")
 
-        # Read existing restro_data
         try:
             with open(file_path, "r") as f:
                 try:

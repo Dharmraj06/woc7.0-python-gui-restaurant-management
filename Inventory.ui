@@ -168,55 +168,6 @@ QPushButton:pressed {
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="Line" name="line">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="set_thres_pb">
-       <property name="font">
-        <font>
-         <family>Segoe UI Variable Small</family>
-         <pointsize>-1</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
-    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
-    stop:0.0631579 rgba(0, 115, 168, 216), 
-    stop:0.448864 rgba(14, 116, 163, 227), 
-    stop:0.653409 rgba(25, 116, 159, 199), 
-    stop:0.8125 rgba(35, 117, 155, 191), 
-    stop:0.982955 rgba(49, 118, 150, 185));
-    
-    color: #FFFAF0;  
-    border-radius: 20px;      
-    padding: 10px;             
-    font-size: 20px;           
-    border: 2px solid rgb(112, 172, 198);  
-
-}
-
-QPushButton:pressed {
-    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
-    stop:0.0631579 rgba(0, 100, 140, 216),  
-    stop:0.448864 rgba(10, 100, 140, 227), 
-    stop:0.653409 rgba(20, 100, 140, 199), 
-    stop:0.8125 rgba(30, 100, 140, 191), 
-    stop:0.982955 rgba(40, 100, 140, 185));
-}
-
-
-</string>
-       </property>
-       <property name="text">
-        <string>Set Threshold</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </widget>
   </widget>

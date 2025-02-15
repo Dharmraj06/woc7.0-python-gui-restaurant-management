@@ -83,6 +83,14 @@
       <height>321</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QListView {
+    background-color: qlineargradient(spread:pad, x1:0.537, y1:0.971591, x2:0.542, y2:0, stop:0 rgba(114, 185, 217, 239), stop:0.178947 rgba(180, 210, 223, 243), stop:1 rgba(255, 255, 255, 255));
+    border: 2px solid rgb(78, 114, 130);
+    border-radius: 10px;
+}
+</string>
+    </property>
    </widget>
    <widget class="QLabel" name="price_label">
     <property name="geometry">
@@ -115,6 +123,14 @@
       <height>321</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QListView {
+    background-color: qlineargradient(spread:pad, x1:0.537, y1:0.971591, x2:0.542, y2:0, stop:0 rgba(114, 185, 217, 239), stop:0.178947 rgba(180, 210, 223, 243), stop:1 rgba(255, 255, 255, 255));
+    border: 2px solid rgb(78, 114, 130);
+    border-radius: 10px;
+}
+</string>
+    </property>
    </widget>
    <widget class="QComboBox" name="type_comboBox">
     <property name="geometry">
@@ -135,6 +151,21 @@
     </property>
     <property name="layoutDirection">
      <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
     </property>
     <property name="currentIndex">
      <number>0</number>

@@ -34,6 +34,12 @@
       <underline>true</underline>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color:rgb(78, 114, 130);
+}
+</string>
+    </property>
     <property name="text">
      <string>Name : </string>
     </property>
@@ -53,6 +59,12 @@
       <pointsize>14</pointsize>
       <underline>true</underline>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color:rgb(78, 114, 130);
+}
+</string>
     </property>
     <property name="text">
      <string>Quantity(in kg/L) : </string>
@@ -74,6 +86,12 @@
       <underline>true</underline>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color:rgb(78, 114, 130);
+}
+</string>
+    </property>
     <property name="text">
      <string>Price(₹/(Kg/L)) : </string>
     </property>
@@ -82,7 +100,7 @@
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>160</y>
+      <y>170</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -93,6 +111,12 @@
       <pointsize>14</pointsize>
       <underline>true</underline>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color:rgb(78, 114, 130);
+}
+</string>
     </property>
     <property name="text">
      <string>Min Quantity:</string>
@@ -110,8 +134,23 @@
     <property name="font">
      <font>
       <family>Segoe UI Variable Small Light</family>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
@@ -126,8 +165,23 @@
     <property name="font">
      <font>
       <family>Segoe UI Variable Small Light</family>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_3">
@@ -142,15 +196,30 @@
     <property name="font">
      <font>
       <family>Segoe UI Variable Small Light</family>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_4">
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>160</y>
+      <y>170</y>
       <width>301</width>
       <height>31</height>
      </rect>
@@ -158,8 +227,23 @@
     <property name="font">
      <font>
       <family>Segoe UI Variable Small Light</family>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
     </property>
    </widget>
    <widget class="QPushButton" name="cancel_pb">

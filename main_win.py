@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QMainWindow, QLabel, QPushButton, QComboBox, QApplication
 from PyQt5 import uic
 import sys, os
+import json
 from add_restro import AddRestroWindow  # Import the AddRestroWindow class
 from add_rm import Add_rm
 from inventory import Inventory
@@ -9,10 +10,15 @@ class UI(QMainWindow):
     def __init__(self):
         super(UI, self).__init__()
 
-        # Load the main UI file
+
 
         ui_file = "main_win.ui"
+        if not os.path.exists(ui_file):
+            print(f"Error: {ui_file} not found!")
+            return
+
         uic.loadUi(ui_file, self)
+
 
         # inheriting the widgets
         self.name_label = self.findChild(QLabel, "name_label")
@@ -28,6 +34,10 @@ class UI(QMainWindow):
         self.add_rm_window = None
         self.inventory_window = None
 
+
+
+
+        self.set_text()
 
         # Connect button to open the second window
 
@@ -58,6 +68,26 @@ class UI(QMainWindow):
 
         print("till this the code has ran!!")
         self.inventory_window.show()
+
+    def set_text(self):
+        json_file = "restro_details.json"
+
+        if not os.path.exists(json_file):
+            print(f"Error: {json_file} not found!")
+            return
+
+        try:
+            with open(json_file, "r") as f:
+                data = json.load(f)
+
+            if "Name" in data[0]:
+                self.name_label.setText(data[0]["Name"])
+            else:
+                print("invalid")
+
+
+        except:
+            pass
 
 # Initialize the application
 app = QApplication(sys.argv)

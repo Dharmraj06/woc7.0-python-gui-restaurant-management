@@ -13,14 +13,14 @@ class Curr_inventory(QMainWindow):
 
         ui_file = "curr_inven.ui"
 
-        # checking if the file exists or not;
+
         if not os.path.exists(ui_file):
             print(f"Error: {ui_file} not found!")
             return
 
         uic.loadUi(ui_file, self)
 
-        # Set window title
+
         self.setWindowTitle("Current Inventory")
 
         #inheriting the widgets
@@ -41,7 +41,7 @@ class Curr_inventory(QMainWindow):
         self.quant_model = QStandardItemModel()
         self.min_qantity_model = QStandardItemModel()
 
-        # display the  inventory data
+
         self.show_inventory_data()
 
     def show_inventory_data(self):

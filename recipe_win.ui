@@ -133,6 +133,21 @@ QPushButton:pressed {
       <pointsize>16</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="add_recipe_pb">
     <property name="geometry">
@@ -229,6 +244,21 @@ QPushButton:pressed {
       <pointsize>16</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
+    </property>
    </widget>
    <widget class="QLabel" name="type_label">
     <property name="geometry">
@@ -270,6 +300,21 @@ QPushButton:pressed {
     <property name="layoutDirection">
      <enum>Qt::LeftToRight</enum>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
+    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
@@ -294,7 +339,7 @@ QPushButton:pressed {
      </property>
     </item>
    </widget>
-   <widget class="QListView" name="recipe_list">
+   <widget class="QListView" name="rm_list">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -303,8 +348,16 @@ QPushButton:pressed {
       <height>241</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QListView {
+    background-color: qlineargradient(spread:pad, x1:0.537, y1:0.971591, x2:0.542, y2:0, stop:0 rgba(114, 185, 217, 239), stop:0.178947 rgba(180, 210, 223, 243), stop:1 rgba(255, 255, 255, 255));
+    border: 2px solid rgb(78, 114, 130);
+    border-radius: 10px;
+}
+</string>
+    </property>
    </widget>
-   <widget class="QListView" name="quant_list_2">
+   <widget class="QListView" name="quant_list">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -312,6 +365,14 @@ QPushButton:pressed {
       <width>171</width>
       <height>241</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListView {
+    background-color: qlineargradient(spread:pad, x1:0.537, y1:0.971591, x2:0.542, y2:0, stop:0 rgba(114, 185, 217, 239), stop:0.178947 rgba(180, 210, 223, 243), stop:1 rgba(255, 255, 255, 255));
+    border: 2px solid rgb(78, 114, 130);
+    border-radius: 10px;
+}
+</string>
     </property>
    </widget>
    <widget class="QPushButton" name="add_rm_pb">
@@ -374,31 +435,7 @@ QPushButton:pressed {
      <string>Add Raw Material</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="rm_comboBox">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>450</y>
-      <width>201</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Variable Display Semib</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="currentIndex">
-     <number>-1</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Quant_label">
+   <widget class="QLabel" name="Quant_label_1">
     <property name="geometry">
      <rect>
       <x>590</x>
@@ -441,7 +478,7 @@ QPushButton:pressed {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="quant_label">
+   <widget class="QLabel" name="quant_label_2">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -475,6 +512,52 @@ QPushButton:pressed {
       <family>Segoe UI Variable Small Light</family>
       <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="rm_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>450</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small Light</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background: qlineargradient(spread:pad, x1:0.0157895, y1:0.603, x2:1, y2:0.591, stop:0 rgba(37, 134, 179, 255), stop:1 rgba(110, 165, 191, 255)); 
+    
+    border: qlineargradient(spread: repeat, 
+                            x1: 0, y1: 0.602, x2: 1, y2: 0.597, 
+                            stop: 0.0631579 rgba(0, 115, 168, 216), 
+                            stop: 0.752632 rgba(25, 116, 159, 199), 
+                            stop: 0.994737 rgba(49, 118, 150, 0)); 
+    
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;  
+}</string>
     </property>
    </widget>
   </widget>

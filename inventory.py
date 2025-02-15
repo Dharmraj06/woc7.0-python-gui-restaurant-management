@@ -6,7 +6,7 @@ import sys
 
 from add_rm import Add_rm
 from curr_inventory_win import Curr_inventory
-
+from recipe import recipe
 
 class Inventory(QMainWindow):
     def __init__(self):
@@ -17,15 +17,16 @@ class Inventory(QMainWindow):
 
         self.add_rm_window = None
         self.add_curr_inven_window = None
+        self.add_recipe_window = None
 
-        #checking if the file exists or not;
+
         if not os.path.exists(ui_file):
             print(f"Error: {ui_file} not found!")
             return
 
         uic.loadUi(ui_file, self)
 
-        # Set window title
+
         self.setWindowTitle("Inventory")
 
         # inheriting the widgets
@@ -35,12 +36,12 @@ class Inventory(QMainWindow):
         self.set_thres_pb = self.findChild(QPushButton, "set_thres_pb")#used to make sure that the min amount of material is present in the inventory
 
 
-        #setting up the add_pb button
+
         self.add_pb.clicked.connect(self.open_raw_material)
         self.curr_inven_pb.clicked.connect(self.open_inventory_data)
+        self.addrecipe_pb.clicked.connect(self.open_recipe)
 
 
-        #functions
     def open_raw_material(self):
         self.add_rm_window = Add_rm()
             #print("till this the code has run!! 2")
@@ -51,6 +52,8 @@ class Inventory(QMainWindow):
         self.add_curr_inven_window = Curr_inventory()
         self.add_curr_inven_window.show()
 
-
+    def open_recipe(self):
+        self.add_recipe_window = recipe()
+        self.add_recipe_window.show()
 
 
