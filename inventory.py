@@ -5,7 +5,7 @@ import json
 import sys
 
 from add_rm import Add_rm
-from curr_inventory_window import Curr_inventory
+from curr_inventory_win import Curr_inventory
 
 
 class Inventory(QMainWindow):
@@ -38,6 +38,8 @@ class Inventory(QMainWindow):
         #setting up the add_pb button
         self.add_pb.clicked.connect(self.open_raw_material)
         self.curr_inven_pb.clicked.connect(self.open_inventory_data)
+
+
         #functions
     def open_raw_material(self):
         self.add_rm_window = Add_rm()

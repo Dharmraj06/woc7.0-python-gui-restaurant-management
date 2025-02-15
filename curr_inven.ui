@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>819</width>
-    <height>487</height>
+    <height>545</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -138,6 +138,124 @@
     </property>
     <property name="text">
      <string>Min. Qty. :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancel_pb">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>440</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  /* Darker version of the gradient */
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="remove_pb">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>440</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Variable Small</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+QPushButton {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 115, 168, 216), 
+    stop:0.448864 rgba(14, 116, 163, 227), 
+    stop:0.653409 rgba(25, 116, 159, 199), 
+    stop:0.8125 rgba(35, 117, 155, 191), 
+    stop:0.982955 rgba(49, 118, 150, 185));
+    
+    color: #FFFAF0;  
+    border-radius: 20px;      
+    padding: 10px;             
+    font-size: 16px;           
+    border: 2px solid rgb(112, 172, 198);  /* Blue border */
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:repeat, x1:0, y1:0.602, x2:1, y2:0.603, 
+    stop:0.0631579 rgba(0, 100, 140, 216),  /* Darker version of the gradient */
+    stop:0.448864 rgba(10, 100, 140, 227), 
+    stop:0.653409 rgba(20, 100, 140, 199), 
+    stop:0.8125 rgba(30, 100, 140, 191), 
+    stop:0.982955 rgba(40, 100, 140, 185));
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Remove</string>
     </property>
    </widget>
   </widget>

@@ -14,7 +14,7 @@ class UI(QMainWindow):
         ui_file = "main_win.ui"
         uic.loadUi(ui_file, self)
 
-        # Define widgets
+        # inheriting the widgets
         self.name_label = self.findChild(QLabel, "name_label")
         self.theme_cb = self.findChild(QComboBox, "theme")
         self.edit_det_pb = self.findChild(QPushButton, "edit_det_pb")
@@ -23,34 +23,39 @@ class UI(QMainWindow):
         self.menu_pb = self.findChild(QPushButton, "menu_pb")
         self.raw_m_pb = self.findChild(QPushButton, "raw_m_pb")
 
-        # Initialize second window instance
+        #  setting the following the window
         self.add_restro_window = None
         self.add_rm_window = None
         self.inventory_window = None
 
 
         # Connect button to open the second window
+
         self.edit_det_pb.clicked.connect(self.open_add_restro_window)
         self.raw_m_pb.clicked.connect(self.open_add_raw_m_window)
         self.inven_pb.clicked.connect(self.open_inventory_window)
+
         # Show main window
         self.show()
 
     def open_add_restro_window(self):
         #self.hide()
         print("till this the code has ran!!")
+
         self.add_restro_window = AddRestroWindow()
         self.add_restro_window.show()
         
     def open_add_raw_m_window(self):
         #self.hide()
         #print("till this the code has ran!!")
+
         self.add_rm_window = Add_rm()
         self.add_rm_window.show()
 
     def open_inventory_window(self):
         print("till this the code has ran!!")
         self.inventory_window = Inventory()
+
         print("till this the code has ran!!")
         self.inventory_window.show()
 

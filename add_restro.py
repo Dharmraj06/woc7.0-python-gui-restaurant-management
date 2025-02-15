@@ -22,8 +22,8 @@ class AddRestroWindow(QMainWindow):
         self.add_restro_pb = self.findChild(QPushButton, "add_restro_pb")
 
         self.name_edit = self.findChild(QLineEdit, "lineEdit")
-        self.address_edit = self.findChild(QLineEdit, "lineEdit_2")
-        self.contact_edit = self.findChild(QLineEdit, "lineEdit_3")
+        self.gstin_edit = self.findChild(QLineEdit, "lineEdit_2")
+        self.fssai_edit = self.findChild(QLineEdit, "lineEdit_3")
 
         self.selected_logo_path = None  # To store the selected logo path
 
@@ -33,7 +33,6 @@ class AddRestroWindow(QMainWindow):
         self.add_restro_pb.clicked.connect(self.save_restaurant_data)
 
     def add_logo(self):
-        """ Opens file dialog to select an image and displays it in logo_label """
         file_name, _ = QFileDialog.getOpenFileName(self, "Select Logo", "", "Images (*.png *.jpg *.jpeg *.bmp *.gif)")
         if file_name:
             pixmap = QPixmap(file_name)
@@ -43,10 +42,10 @@ class AddRestroWindow(QMainWindow):
 
     def save_restaurant_data(self):
         name = self.name_edit.text().strip()
-        address = self.address_edit.text().strip()
-        contact = self.contact_edit.text().strip()
+        gstin = self.gstin_edit.text().strip()
+        fssai = self.fssai_edit.text().strip()
 
-        if not name or not address or not contact:
+        if not name or not gstin or not fssai:
             print("Error: All fields must be filled in.")
             return
 
@@ -64,18 +63,18 @@ class AddRestroWindow(QMainWindow):
         saved_logo_path = os.path.join(logo_folder, logo_filename)
         shutil.copy(self.selected_logo_path, saved_logo_path)  # Copy image to storage folder
 
-        # Prepare data
-        data = {
+        # Prepare restro_data
+        restro_data = {
             "Name": name,
-            "Address": address,
-            "Contact": contact,
+            "gstin": gstin,
+            "fssai": fssai,
             "Logo": saved_logo_path  # Store image path in JSON
         }
 
         # File path for storing restaurant details
         file_path = os.path.join(os.getcwd(), "restro_details.json")
 
-        # Read existing data
+        # Read existing restro_data
         try:
             with open(file_path, "r") as f:
                 try:
@@ -87,11 +86,11 @@ class AddRestroWindow(QMainWindow):
         except FileNotFoundError:
             existing_data = []
 
-        # Append new restaurant data
-        existing_data.append(data)
+        # Append new restaurant restro_data
+        existing_data.append(restro_data)
 
-        # Write updated data back to file
+        # Write updated restro_data back to file
         with open(file_path, "w") as f:
             json.dump(existing_data, f, indent=4)
 
-        print("Restaurant details saved successfully.")
+        print("Restro details saved successfully!")
