@@ -1,0 +1,200 @@
+[
+    {
+        "Name": "rice",
+        "Quant": "10",
+        "Price": "200",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "toor dal",
+        "Quant": "2",
+        "Price": "180",
+        "Min Quantity": "3"
+    },
+    {
+        "Name": "juice",
+        "Quant": "3",
+        "Price": "120",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "paneer",
+        "Quant": "5",
+        "Price": "300",
+        "Min Quantity": "2"
+    },
+    {
+        "Name": "tomato",
+        "Quant": "8",
+        "Price": "100",
+        "Min Quantity": "2"
+    },
+    {
+        "Name": "butter",
+        "Quant": "3",
+        "Price": "250",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "spices",
+        "Quant": "10",
+        "Price": "50",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "chicken",
+        "Quant": "6",
+        "Price": "400",
+        "Min Quantity": "2"
+    },
+    {
+        "Name": "onion",
+        "Quant": "4",
+        "Price": "80",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "vegetables",
+        "Quant": "7",
+        "Price": "150",
+        "Min Quantity": "2"
+    },
+    {
+        "Name": "flour",
+        "Quant": "5",
+        "Price": "50",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "soy sauce",
+        "Quant": "4",
+        "Price": "120",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "bread",
+        "Quant": "6",
+        "Price": "60",
+        "Min Quantity": "2"
+    },
+    {
+        "Name": "garlic",
+        "Quant": "4",
+        "Price": "100",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "basil",
+        "Quant": "3",
+        "Price": "200",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "olive oil",
+        "Quant": "5",
+        "Price": "150",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "mango",
+        "Quant": "6",
+        "Price": "100",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "milk",
+        "Quant": "2",
+        "Price": "80",
+        "Min Quantity": "3"
+    },
+    {
+        "Name": "sugar",
+        "Quant": "7",
+        "Price": "40",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "lemon",
+        "Quant": "5",
+        "Price": "60",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "coffee",
+        "Quant": "4",
+        "Price": "200",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "ice",
+        "Quant": "8",
+        "Price": "30",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "potatoes",
+        "Quant": "10",
+        "Price": "100",
+        "Min Quantity": "2"
+    },
+    {
+        "Name": "mayonnaise",
+        "Quant": "2",
+        "Price": "150",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "cabbage",
+        "Quant": "3",
+        "Price": "80",
+        "Min Quantity": "2"
+    },
+    {
+        "Name": "carrots",
+        "Quant": "4",
+        "Price": "150",
+        "Min Quantity": "2"
+    },
+    {
+        "Name": "corn chips",
+        "Quant": "5",
+        "Price": "120",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "cheese",
+        "Quant": "6",
+        "Price": "250",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "jalapenos",
+        "Quant": "2",
+        "Price": "100",
+        "Min Quantity": "3"
+    },
+    {
+        "Name": "herbs",
+        "Quant": "4",
+        "Price": "70",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "beans",
+        "Quant": "5",
+        "Price": "120",
+        "Min Quantity": "2"
+    },
+    {
+        "Name": "tomato sauce",
+        "Quant": "3",
+        "Price": "90",
+        "Min Quantity": "1"
+    },
+    {
+        "Name": "olive oil",
+        "Quant": "5",
+        "Price": "150",
+        "Min Quantity": "1"
+    }
+]

@@ -1,0 +1,191 @@
+[
+    {
+        "name": "Rice",
+        "price": "150",
+        "type": "Appetizers",
+        "raw_materials": ["rice"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "biryani",
+        "price": "250",
+        "type": "Main Courses",
+        "raw_materials": ["rice", "toor dal", "juice"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "dal fry",
+        "price": "150",
+        "type": "Main Courses",
+        "raw_materials": ["toor dal", "water", "lentils"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Paneer Butter Masala",
+        "price": "300",
+        "type": "Main Courses",
+        "raw_materials": ["paneer", "tomato", "butter", "spices"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Chicken Curry",
+        "price": "350",
+        "type": "Main Courses",
+        "raw_materials": ["chicken", "onion", "tomato", "spices"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Veg Pulao",
+        "price": "200",
+        "type": "Main Courses",
+        "raw_materials": ["rice", "vegetables", "spices", "water"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Butter Chicken",
+        "price": "400",
+        "type": "Main Courses",
+        "raw_materials": ["chicken", "butter", "cream", "spices"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Mutton Rogan Josh",
+        "price": "450",
+        "type": "Main Courses",
+        "raw_materials": ["mutton", "yogurt", "spices", "onion"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Vegetable Korma",
+        "price": "280",
+        "type": "Main Courses",
+        "raw_materials": ["vegetables", "coconut milk", "spices"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Spring Rolls",
+        "price": "180",
+        "type": "Appetizers",
+        "raw_materials": ["flour", "vegetables", "soy sauce"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Garlic Bread",
+        "price": "120",
+        "type": "Appetizers",
+        "raw_materials": ["bread", "butter", "garlic"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Bruschetta",
+        "price": "140",
+        "type": "Appetizers",
+        "raw_materials": ["bread", "tomato", "basil", "olive oil"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Nachos",
+        "price": "160",
+        "type": "Appetizers",
+        "raw_materials": ["corn chips", "cheese", "jalapenos"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Stuffed Mushrooms",
+        "price": "190",
+        "type": "Appetizers",
+        "raw_materials": ["mushrooms", "cheese", "herbs"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Cheese Balls",
+        "price": "170",
+        "type": "Appetizers",
+        "raw_materials": ["cheese", "bread crumbs", "potatoes"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Mango Shake",
+        "price": "120",
+        "type": "Beverages",
+        "raw_materials": ["mango", "milk", "sugar"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Lemonade",
+        "price": "100",
+        "type": "Beverages",
+        "raw_materials": ["lemon", "water", "sugar"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Cold Coffee",
+        "price": "150",
+        "type": "Beverages",
+        "raw_materials": ["coffee", "milk", "ice"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Strawberry Smoothie",
+        "price": "180",
+        "type": "Beverages",
+        "raw_materials": ["strawberries", "yogurt", "honey"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Orange Juice",
+        "price": "120",
+        "type": "Beverages",
+        "raw_materials": ["orange", "sugar", "water"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Hot Chocolate",
+        "price": "200",
+        "type": "Beverages",
+        "raw_materials": ["milk", "cocoa powder", "sugar"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "French Fries",
+        "price": "130",
+        "type": "Side Dishes",
+        "raw_materials": ["potatoes", "oil", "salt"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Coleslaw",
+        "price": "110",
+        "type": "Side Dishes",
+        "raw_materials": ["cabbage", "mayonnaise", "carrots"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Mashed Potatoes",
+        "price": "140",
+        "type": "Side Dishes",
+        "raw_materials": ["potatoes", "butter", "milk"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Baked Beans",
+        "price": "150",
+        "type": "Side Dishes",
+        "raw_materials": ["beans", "tomato sauce", "spices"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Sauteed Vegetables",
+        "price": "160",
+        "type": "Side Dishes",
+        "raw_materials": ["vegetables", "olive oil", "garlic"],
+        "quantities": ["1"]
+    },
+    {
+        "name": "Corn on the Cob",
+        "price": "120",
+        "type": "Side Dishes",
+        "raw_materials": ["corn", "butter", "salt"],
+        "quantities": ["1"]
+    }
+]
