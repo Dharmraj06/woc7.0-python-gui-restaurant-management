@@ -5,9 +5,10 @@ import json
 import sys
 
 class Add_rm(QMainWindow):
-    def __init__(self):
+    def __init__(self,theme):
         super(Add_rm, self).__init__()
 
+        self.theme = theme
         ui_file = "Add_r-m.ui"
 
         if not os.path.exists(ui_file):
@@ -31,6 +32,8 @@ class Add_rm(QMainWindow):
         #connecting..
         self.cancel_pb.clicked.connect(self.close)
         self.add_to_list_pb.clicked.connect(self.save_data)
+
+        self.change_theme()
 
     def save_data(self):
         name1 = self.name_le1.text()
@@ -72,4 +75,11 @@ class Add_rm(QMainWindow):
 
         else:
             print("Error: All fields must be filled in.")
+
+
+    def change_theme(self):
+        if self.theme == "Dark":
+            self.setStyleSheet("background-color: #2E2E2E; color: white;")
+        else:  # Light theme
+            self.setStyleSheet("background-color: white; color: black;")
 

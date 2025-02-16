@@ -7,10 +7,11 @@ import json
 
 class recipe(QMainWindow):
 
-    def __init__(self):
+    def __init__(self,theme):
         super(recipe, self).__init__()
         # super(Add_rm, self).__init__()
 
+        self.theme =theme
         ui_file = "recipe_win.ui"
 
         if not os.path.exists(ui_file):
@@ -43,6 +44,8 @@ class recipe(QMainWindow):
 
         self.rm_list.setModel(self.rm_name_model)
         self.quant_list.setModel(self.quant_list_model)
+        self.change_theme()
+
 
     def add_recipe(self):
         name = self.recipe_lineEdit.text().strip()
@@ -117,3 +120,10 @@ class recipe(QMainWindow):
             self.quant_list_model.appendRow(quant_item)
             self.rm_lineEdit.setText("")
             self.quant_lineEdit.setText("")
+
+    def change_theme(self):
+
+        if self.theme == "Dark":
+            self.setStyleSheet("background-color: #2E2E2E; color: white;")
+        else:  # Light theme
+            self.setStyleSheet("background-color: white; color: black;")

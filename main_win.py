@@ -48,7 +48,8 @@ class UI(QMainWindow):
         self.inven_pb.clicked.connect(self.open_inventory_window)
         self.menu_pb.clicked.connect(self.open_menu_window)
         self.bill_pb.clicked.connect(self.open_billing_window)
-
+        self.theme_cb.currentTextChanged.connect(self.change_theme)
+        self.theme = "light"
         # Show main window
         self.show()
 
@@ -56,25 +57,25 @@ class UI(QMainWindow):
         #self.hide()
         print("till this the code has ran!!")
 
-        self.add_restro_window = AddRestroWindow()
+        self.add_restro_window = AddRestroWindow(self.theme)
         self.add_restro_window.show()
         
     def open_add_raw_m_window(self):
         #self.hide()
         #print("till this the code has run!!")
 
-        self.add_rm_window = Add_rm()
+        self.add_rm_window = Add_rm(self.theme)
         self.add_rm_window.show()
 
     def open_inventory_window(self):
         print("till this the code has ran!!")
-        self.inventory_window = Inventory()
+        self.inventory_window = Inventory(self.theme)
 
         print("till this the code has ran!!")
         self.inventory_window.show()
 
     def open_menu_window(self):
-        self.menu_window = menu()
+        self.menu_window = menu(self.theme)
         self.menu_window.show()
 
     def set_text(self):
@@ -98,8 +99,16 @@ class UI(QMainWindow):
             pass
 
     def open_billing_window(self):
-        self.billing_window = billing()
+        self.billing_window = billing(self.theme)
         self.billing_window.show()
+
+    def change_theme(self):
+        self.theme = str(self.theme_cb.currentText())
+        if self.theme == "Dark":
+            self.setStyleSheet("background-color: #2E2E2E; color: white;")
+        else:  # Light theme
+            self.setStyleSheet("background-color: white; color: black;")
+
 
 # Initialize the application
 app = QApplication(sys.argv)

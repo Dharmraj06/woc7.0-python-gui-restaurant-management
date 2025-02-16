@@ -7,10 +7,10 @@ import json
 from PyQt5.QtCore import QStringListModel
 
 class Curr_inventory(QMainWindow):
-    def __init__(self):
+    def __init__(self,theme):
         super(Curr_inventory,self).__init__()
 
-
+        self.theme = theme
         ui_file = "curr_inven.ui"
 
 
@@ -43,6 +43,8 @@ class Curr_inventory(QMainWindow):
 
 
         self.show_inventory_data()
+        self.change_theme()
+
 
     def show_inventory_data(self):
         json_file = "raw_m.json"
@@ -101,6 +103,11 @@ class Curr_inventory(QMainWindow):
             self.quant_model.removeRow(idx.row())
             self.min_qantity_model.removeRow(idx.row())
 
+    def change_theme(self):
 
+        if self.theme == "Dark":
+            self.setStyleSheet("background-color: #2E2E2E; color: white;")
+        else:  # Light theme
+            self.setStyleSheet("background-color: white; color: black;")
 
 

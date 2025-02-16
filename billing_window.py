@@ -6,8 +6,10 @@ from PyQt5.QtGui import QStandardItemModel, QStandardItem, QPixmap
 from PyQt5 import uic
 
 class billing(QMainWindow):
-    def __init__(self):
+    def __init__(self,theme):
         super(billing, self).__init__()
+
+        self.theme = theme
 
         self.amt_model = QStandardItemModel()
         self.price_model = QStandardItemModel()
@@ -38,7 +40,7 @@ class billing(QMainWindow):
         self.add_disc_lineedit = self.findChild(QLineEdit, "add_disc_lineEdit")
 
         self.cancel_pb = self.findChild(QPushButton, "cancel_pb")
-        self.print_pb = self.findChild(QPushButton, "print_pb")
+        #self.print_pb = self.findChild(QPushButton, "print_pb")
 
         self.discount_cb = self.findChild(QCheckBox, "discount_cb")
 
@@ -46,11 +48,14 @@ class billing(QMainWindow):
         self.cancel_pb.clicked.connect(self.close_window)
         self.discount_cb.stateChanged.connect(self.add_discount)
         self.discount = 0
-
+        self.subtotal = 0
         self.bill_items = []  # Store merged bill items
 
         self.set_logo_name()
         self.process_bill_items()
+        self.change_theme()
+
+
 
     def set_logo_name(self):
         restro_json_file = "restro_details.json"
@@ -101,8 +106,6 @@ class billing(QMainWindow):
             self.update_ui_lists()
             self.calculate_totals()  # Calculate totals after processing
 
-        except json.JSONDecodeError:
-            print("Error: Invalid JSON format in recipe_bill.json")
         except Exception as e:
             print(f"Unexpected error in process_bill_items: {e}")
 
@@ -125,10 +128,16 @@ class billing(QMainWindow):
     def update_ui_lists(self):
 
         for item in self.bill_items:
-            self.item_model.appendRow(QStandardItem(item["name"]))
-            self.qty_model.appendRow(QStandardItem(str(item["qty"])))
-            self.price_model.appendRow(QStandardItem(f"{item['price']:.2f}"))
-            self.amt_model.appendRow(QStandardItem(f"{item['amount']:.2f}"))
+
+             item_name= QStandardItem(item["name"])
+             item_qty= QStandardItem(item["qty"])
+             item_price= QStandardItem(item['price'])
+             item_amt= QStandardItem(item['amount'])
+
+             self.item_model.appendRow(item_name)
+             self.qty_model.appendRow(item_qty)
+             self.price_model.appendRow(item_price)
+             self.amt_model.appendRow(item_amt)
 
         self.item_list.setModel(self.item_model)
         self.qty_list.setModel(self.qty_model)
@@ -136,11 +145,13 @@ class billing(QMainWindow):
         self.amt_list.setModel(self.amt_model)
 
     def calculate_totals(self):
-        subtotal = sum(item["amount"] for item in self.bill_items)
-        discount_amount = (self.discount / 100) * subtotal if self.discount > 0 else 0
-        grand_total = subtotal - discount_amount
+        for item in self.bill_items:
+            self.subtotal += int(item["amount"])
 
-        self.subtotal_label.setText(f"₹{subtotal}")
+        discount_amount = (self.discount / 100) * self.subtotal if self.discount > 0 else 0
+        grand_total = self.subtotal - discount_amount
+
+        self.subtotal_label.setText(f"₹{self.subtotal}")
         self.discount_label.setText(f"₹{discount_amount}")
         self.gtotal_label.setText(f"₹{grand_total}")
 
@@ -150,8 +161,7 @@ class billing(QMainWindow):
             if discount_value:
                 try:
                     self.discount = int(discount_value)
-
-                except ValueError:
+                except:
                     pass
             else:
                 print("No discount entered.")
@@ -185,3 +195,10 @@ class billing(QMainWindow):
         self.item_list.setModel(self.item_model)
 
         self.close
+
+    def change_theme(self):
+
+        if self.theme == "Dark":
+            self.setStyleSheet("background-color: #2E2E2E; color: white;")
+        else:  # Light theme
+            self.setStyleSheet("background-color: white; color: black;")

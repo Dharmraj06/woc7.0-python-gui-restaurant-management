@@ -7,9 +7,10 @@ import json
 import shutil  # For copying image files
 
 class AddRestroWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self,theme):
         super(AddRestroWindow, self).__init__()
 
+        self.theme = theme
         ui_file = "Add_restro_win.ui"
         uic.loadUi(ui_file, self)
 
@@ -31,6 +32,8 @@ class AddRestroWindow(QMainWindow):
         self.add_logo_button.clicked.connect(self.add_logo)
         self.cancel_pb.clicked.connect(self.close)
         self.add_restro_pb.clicked.connect(self.save_restaurant_data)
+
+        self.change_theme()
 
     def add_logo(self):
         file_name, _ = QFileDialog.getOpenFileName(self, "Select Logo", "", "Images (*.png *.jpg *.jpeg *.bmp *.gif)")
@@ -93,3 +96,10 @@ class AddRestroWindow(QMainWindow):
             json.dump(existing_data, f, indent=4)
 
         print("Restro details saved successfully!")
+
+    def change_theme(self):
+
+        if self.theme == "Dark":
+            self.setStyleSheet("background-color: #2E2E2E; color: white;")
+        else:  # Light theme
+            self.setStyleSheet("background-color: white; color: black;")

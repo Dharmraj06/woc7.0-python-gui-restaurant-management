@@ -1,3 +1,5 @@
+from statistics import quantiles
+
 from PyQt5.QtCore import QSysInfo, Qt
 from PyQt5.QtWidgets import QMainWindow, QLabel, QPushButton, QComboBox, QListView
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QColor, QPixmap
@@ -7,9 +9,10 @@ import json
 
 
 class menu(QMainWindow):
-    def __init__(self):
+    def __init__(self,theme):
         super(menu, self).__init__()
 
+        self.theme = theme
         ui_file = "menu_win.ui"
         if not os.path.exists(ui_file):
             print(f"Error: {ui_file} not found!")
@@ -28,7 +31,7 @@ class menu(QMainWindow):
         self.add_recipe_pb = self.findChild(QPushButton, "add_recipe_pb")
 
         # connecting the function
-        self.type_comboBox.currentTextChanged.connect(self.text_change)
+        self.type_comboBox.currentTextChanged.connect(self.type_change)
         self.add_recipe_pb.clicked.connect(self.add_recipe)
 
         self.item_list_model = QStandardItemModel()
@@ -41,6 +44,8 @@ class menu(QMainWindow):
         # calling functions
         self.default_type()
         self.set_logo_name()
+        self.change_theme()
+
 
     def set_logo_name(self):
         restro_json_file = "restro_details.json"
@@ -74,7 +79,7 @@ class menu(QMainWindow):
         except:
             pass
 
-    def text_change(self):
+    def type_change(self):
         selected_text = self.type_comboBox.currentText()
         json_file = "recipe_list.json"
 
@@ -212,8 +217,28 @@ class menu(QMainWindow):
                     recipe_name = self.item_list_model.data(idx)
 
                     for item in data:
+                        raw_material_file = "raw_m.json"
+                        if not os.path.exists(raw_material_file):
+                            print(f"Error: {raw_material_file} not found!")
+                            return
+                        try:
+                            with open(raw_material_file, "r") as rm_file:
+                                rm_data = json.load(rm_file)
+
+                            if not isinstance(data, list):
+                                print("Error: Invalid JSON format!")
+                                return
+
+                            for raw_material in rm_data:
+                                if raw_material["Name"] in item["raw_materials"]:
+                                    idx = item["raw_materials"].index[raw_material["Name"]]
+                                    raw_material["quant"] = str(int(raw_material["quant"]) - int(item["quantities"][idx]))
+                        except Exception as e:
+                            print(f"error occured: {e}")
+
                         if recipe_name == item["name"]:
                             price = item["price"]
+
 
                     bill_data = {
                         "recipe_name": recipe_name,
@@ -244,3 +269,12 @@ class menu(QMainWindow):
 
             except Exception as e:
                 print(f"2) Error occurred while saving: {e}")
+
+            self.type_change()
+
+    def change_theme(self):
+
+        if self.theme == "Dark":
+            self.setStyleSheet("background-color: #2E2E2E; color: white;")
+        else:  # Light theme
+            self.setStyleSheet("background-color: white; color: black;")
