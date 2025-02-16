@@ -4,7 +4,9 @@ import sys, os
 import json
 from add_restro import AddRestroWindow  # Import the AddRestroWindow class
 from add_rm import Add_rm
+from billing_window import billing
 from inventory import Inventory
+from menu_win import menu
 
 class UI(QMainWindow):
     def __init__(self):
@@ -33,8 +35,8 @@ class UI(QMainWindow):
         self.add_restro_window = None
         self.add_rm_window = None
         self.inventory_window = None
-
-
+        self.menu_window = None
+        self.billing_window = None
 
 
         self.set_text()
@@ -44,6 +46,8 @@ class UI(QMainWindow):
         self.edit_det_pb.clicked.connect(self.open_add_restro_window)
         self.raw_m_pb.clicked.connect(self.open_add_raw_m_window)
         self.inven_pb.clicked.connect(self.open_inventory_window)
+        self.menu_pb.clicked.connect(self.open_menu_window)
+        self.bill_pb.clicked.connect(self.open_billing_window)
 
         # Show main window
         self.show()
@@ -57,7 +61,7 @@ class UI(QMainWindow):
         
     def open_add_raw_m_window(self):
         #self.hide()
-        #print("till this the code has ran!!")
+        #print("till this the code has run!!")
 
         self.add_rm_window = Add_rm()
         self.add_rm_window.show()
@@ -68,6 +72,10 @@ class UI(QMainWindow):
 
         print("till this the code has ran!!")
         self.inventory_window.show()
+
+    def open_menu_window(self):
+        self.menu_window = menu()
+        self.menu_window.show()
 
     def set_text(self):
         json_file = "restro_details.json"
@@ -88,6 +96,10 @@ class UI(QMainWindow):
 
         except:
             pass
+
+    def open_billing_window(self):
+        self.billing_window = billing()
+        self.billing_window.show()
 
 # Initialize the application
 app = QApplication(sys.argv)

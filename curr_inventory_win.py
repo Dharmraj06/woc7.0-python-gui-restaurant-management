@@ -60,12 +60,7 @@ class Curr_inventory(QMainWindow):
                 return
 
 
-
             for item in data:
-                # name_list.append(item["Name"])
-                #quant_list.append(item["Quant"])
-                #price_list.append(item["Price"])
-                # min_qantity_list.append(item["Min Quantity"])
 
                 name_item = QStandardItem(item["Name"])
                 price_item = QStandardItem(item["Price"])

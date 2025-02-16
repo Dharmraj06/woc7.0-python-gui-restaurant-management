@@ -26,8 +26,8 @@ class recipe(QMainWindow):
         self.recipe_lineEdit = self.findChild(QLineEdit, "recipe_lineEdit")  # main name of the recipe
         self.add_recipe_pb = self.findChild(QPushButton, "add_recipe_pb")  # adds the recipe to the json file
         self.price_lineEdit = self.findChild(QLineEdit, "price_lineEdit")  # sets the price of the recipe
-        self.type_comboBox = self.findChild(QComboBox, "type_comboBox")  # sets the type of the recipe
-        self.rm_list = self.findChild(QListView, "rm_list")  # shows the list of the raw materials
+        self.type_comboBox = self.findChild(QComboBox, "type_comboBox")  #sets the type of the recipe
+        self.rm_list = self.findChild(QListView, "rm_list")  #shows the list of the raw materials
         self.quant_list = self.findChild(QListView, "quant_list")  # list of the quantity of the raw material
         self.add_rm_pb = self.findChild(QPushButton, "add_rm_pb")  # adds the rm to the list
         self.quant_lineEdit = self.findChild(QLineEdit, "quant_lineEdit")  # enters the quant of the rm
@@ -40,6 +40,7 @@ class recipe(QMainWindow):
 
         self.rm_name_model = QStandardItemModel()
         self.quant_list_model = QStandardItemModel()
+
         self.rm_list.setModel(self.rm_name_model)
         self.quant_list.setModel(self.quant_list_model)
 
@@ -61,6 +62,7 @@ class recipe(QMainWindow):
             "name": name,
             "price": price,
             "type": recipe_type,
+
             "raw_materials": raw_m_list,
             "quantities": quant_m_list
         }
@@ -97,21 +99,21 @@ class recipe(QMainWindow):
         self.quant_list_model.clear()
 
 
-def add_rm(self):
-    rm_name = self.rm_lineEdit.text().strip()
-    quant = self.quant_lineEdit.text().strip()
+    def add_rm(self):
+        rm_name = self.rm_lineEdit.text().strip()
+        quant = self.quant_lineEdit.text().strip()
 
-    if not rm_name and quant:
-        print("invalid input!!")
-    else:
-        # rm_data = {
-        #     "rm_name" : rm_name,
-        #     "quant" : quant
-        #     }
-        rm_name_item = QStandardItem(rm_name)
-        quant_item = QStandardItem(quant)
+        if not rm_name and quant:
+            print("invalid input!!")
+        else:
+            # rm_data = {
+            #     "rm_name" : rm_name,
+            #     "quant" : quant
+            #     }
+            rm_name_item = QStandardItem(rm_name)
+            quant_item = QStandardItem(quant)
 
-        self.rm_name_model.appendRow(rm_name_item)
-        self.quant_list_model.appendRow(quant_item)
-        self.rm_lineEdit.setText("")
-        self.quant_lineEdit.setText("")
+            self.rm_name_model.appendRow(rm_name_item)
+            self.quant_list_model.appendRow(quant_item)
+            self.rm_lineEdit.setText("")
+            self.quant_lineEdit.setText("")

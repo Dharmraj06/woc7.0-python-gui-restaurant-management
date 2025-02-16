@@ -1,3 +1,4 @@
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QLabel, QLineEdit, QFileDialog
 from PyQt5 import uic
 from PyQt5.QtGui import QPixmap
@@ -15,7 +16,6 @@ class AddRestroWindow(QMainWindow):
 
         self.setWindowTitle("Add Restaurant Details")
 
-        # Get widgets
         self.logo_label = self.findChild(QLabel, "logo_label")
         self.add_logo_button = self.findChild(QPushButton, "add_logo_pb")
         self.cancel_pb = self.findChild(QPushButton, "cancel_pb")
@@ -36,8 +36,10 @@ class AddRestroWindow(QMainWindow):
         file_name, _ = QFileDialog.getOpenFileName(self, "Select Logo", "", "Images (*.png *.jpg *.jpeg *.bmp *.gif)")
         if file_name:
             pixmap = QPixmap(file_name)
-            self.logo_label.setPixmap(pixmap)
-            self.logo_label.setScaledContents(True)
+            scaled_pixmap = pixmap.scaled(self.logo_label.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+
+            self.logo_label.setPixmap(scaled_pixmap)
+            self.logo_label.setScaledContents(False)
             self.selected_logo_path = file_name  # Store selected image path
 
     def save_restaurant_data(self):
