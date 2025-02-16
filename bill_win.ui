@@ -274,7 +274,7 @@ QPushButton:pressed {
 </string>
     </property>
     <property name="text">
-     <string>Cancel</string>
+     <string>Clear</string>
     </property>
    </widget>
    <widget class="QPushButton" name="print_pb">

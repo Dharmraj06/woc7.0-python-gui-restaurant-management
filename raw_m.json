@@ -196,5 +196,11 @@
         "Quant": "5",
         "Price": "150",
         "Min Quantity": "1"
+    },
+    {
+        "Name": "vinegar",
+        "Quant": "4",
+        "Price": "100",
+        "Min Quantity": "2"
     }
 ]
