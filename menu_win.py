@@ -33,7 +33,7 @@ class menu(QMainWindow):
         # connecting the function
         self.type_comboBox.currentTextChanged.connect(self.type_change)
         self.add_recipe_pb.clicked.connect(self.add_recipe)
-        self.cancel_pb.clicked.connect(self.close)
+        self.cancel_pb.clicked.connect(self.close_window)
 
         self.item_list_model = QStandardItemModel()
         self.price_list_model = QStandardItemModel()
@@ -279,3 +279,14 @@ class menu(QMainWindow):
             self.setStyleSheet("background-color: #2E2E2E; color: white;")
         else:  # Light theme
             self.setStyleSheet("background-color: white; color: black;")
+
+    def close_window(self):
+        bill_json_file = "recipe_bill.json"
+        try:
+            with open(bill_json_file, "w") as f:
+                json.dump([], f)  # Overwrite with an empty list
+                print("list is cleared")
+        except Exception as e:
+            print(f"Error clearing JSON file: {e}")
+
+        self.close()

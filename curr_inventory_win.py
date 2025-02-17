@@ -106,7 +106,7 @@ class Curr_inventory(QMainWindow):
     def change_theme(self):
 
         if self.theme == "Dark":
-            self.setStyleSheet("background-color: #2E2E2E; color: white;")
+            self.setStyleSheet("background-color: #2E2E2E; color: black;")
         else:  # Light theme
             self.setStyleSheet("background-color: white; color: black;")
 
