@@ -126,18 +126,16 @@ class billing(QMainWindow):
         return list(item_dict.values())
 
     def update_ui_lists(self):
-
         for item in self.bill_items:
+            item_name = QStandardItem(str(item["name"]))  # Ensure string
+            item_qty = QStandardItem(str(item["qty"]))  # Convert integer to string
+            item_price = QStandardItem(f"₹{item['price']:.2f}")  # Format as ₹0.00
+            item_amt = QStandardItem(f"₹{item['amount']:.2f}")  # Format as ₹0.00
 
-             item_name= QStandardItem(item["name"])
-             item_qty= QStandardItem(item["qty"])
-             item_price= QStandardItem(item['price'])
-             item_amt= QStandardItem(item['amount'])
-
-             self.item_model.appendRow(item_name)
-             self.qty_model.appendRow(item_qty)
-             self.price_model.appendRow(item_price)
-             self.amt_model.appendRow(item_amt)
+            self.item_model.appendRow(item_name)
+            self.qty_model.appendRow(item_qty)
+            self.price_model.appendRow(item_price)
+            self.amt_model.appendRow(item_amt)
 
         self.item_list.setModel(self.item_model)
         self.qty_list.setModel(self.qty_model)
@@ -145,24 +143,20 @@ class billing(QMainWindow):
         self.amt_list.setModel(self.amt_model)
 
     def calculate_totals(self):
-        for item in self.bill_items:
-            self.subtotal += int(item["amount"])
 
-        discount_amount = (self.discount / 100) * self.subtotal if self.discount > 0 else 0
-        grand_total = self.subtotal - discount_amount
+        subtotal = sum(item["amount"] for item in self.bill_items)
+        discount_amount = (self.discount / 100) * subtotal if self.discount > 0 else 0
+        grand_total = subtotal - discount_amount
 
-        self.subtotal_label.setText(f"₹{self.subtotal}")
-        self.discount_label.setText(f"₹{discount_amount}")
-        self.gtotal_label.setText(f"₹{grand_total}")
+        self.subtotal_label.setText(f"₹{subtotal:.2f}")
+        self.discount_label.setText(f"₹{discount_amount:.2f}")
+        self.gtotal_label.setText(f"₹{grand_total:.2f}")
 
     def add_discount(self):
         if self.discount_cb.isChecked():
             discount_value = self.add_disc_lineedit.text().strip()
             if discount_value:
-                try:
                     self.discount = int(discount_value)
-                except:
-                    pass
             else:
                 print("No discount entered.")
         else:

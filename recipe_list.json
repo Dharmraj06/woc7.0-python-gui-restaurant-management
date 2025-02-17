@@ -237,19 +237,7 @@
             "1"
         ]
     },
-    {
-        "name": "Strawberry Smoothie",
-        "price": "180",
-        "type": "Beverages",
-        "raw_materials": [
-            "strawberries",
-            "yogurt",
-            "honey"
-        ],
-        "quantities": [
-            "1"
-        ]
-    },
+
     {
         "name": "Orange Juice",
         "price": "120",

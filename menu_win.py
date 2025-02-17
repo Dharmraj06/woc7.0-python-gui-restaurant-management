@@ -33,6 +33,7 @@ class menu(QMainWindow):
         # connecting the function
         self.type_comboBox.currentTextChanged.connect(self.type_change)
         self.add_recipe_pb.clicked.connect(self.add_recipe)
+        self.cancel_pb.clicked.connect(self.close)
 
         self.item_list_model = QStandardItemModel()
         self.price_list_model = QStandardItemModel()
@@ -231,11 +232,11 @@ class menu(QMainWindow):
 
                             for raw_material in rm_data:
                                 if raw_material["Name"] in item["raw_materials"]:
-                                    idx = item["raw_materials"].index[raw_material["Name"]]
-                                    raw_material["quant"] = str(int(raw_material["quant"]) - int(item["quantities"][idx]))
-                        except Exception as e:
-                            print(f"error occured: {e}")
+                                    idx = item["raw_materials"].index(raw_material["Name"])
+                                    raw_material["Quant"] = str(int(raw_material["Quant"]) - int(item["quantities"][idx]))
 
+                        except:
+                            pass
                         if recipe_name == item["name"]:
                             price = item["price"]
 
