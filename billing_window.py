@@ -145,12 +145,12 @@ class billing(QMainWindow):
     def calculate_totals(self):
 
         subtotal = sum(item["amount"] for item in self.bill_items)
-        discount_amount = (self.discount / 100) * subtotal if self.discount > 0 else 0
-        grand_total = subtotal - discount_amount
+        discount_amt = (self.discount / 100) * subtotal if self.discount > 0 else 0
+        g_total = subtotal - discount_amt
 
         self.subtotal_label.setText(f"₹{subtotal:.2f}")
-        self.discount_label.setText(f"₹{discount_amount:.2f}")
-        self.gtotal_label.setText(f"₹{grand_total:.2f}")
+        self.discount_label.setText(f"₹{discount_amt:.2f}")
+        self.gtotal_label.setText(f"₹{g_total:.2f}")
 
     def add_discount(self):
         if self.discount_cb.isChecked():

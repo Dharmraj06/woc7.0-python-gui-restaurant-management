@@ -94,6 +94,9 @@
 }
 </string>
     </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
    </widget>
    <widget class="QLabel" name="price_label">
     <property name="geometry">
@@ -133,6 +136,9 @@
     border-radius: 10px;
 }
 </string>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
     </property>
    </widget>
    <widget class="QComboBox" name="type_comboBox">

@@ -237,7 +237,6 @@
             "1"
         ]
     },
-
     {
         "name": "Orange Juice",
         "price": "120",
@@ -349,6 +348,19 @@
         "raw_materials": [
             "toor dal",
             "water"
+        ],
+        "quantities": [
+            "1",
+            "1"
+        ]
+    },
+    {
+        "name": "sandwich",
+        "price": "200",
+        "type": "Appetizers",
+        "raw_materials": [
+            "bread",
+            "vegetable"
         ],
         "quantities": [
             "1",

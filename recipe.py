@@ -105,7 +105,7 @@ class recipe(QMainWindow):
     def add_rm(self):
         rm_name = self.rm_lineEdit.text().strip()
         quant = self.quant_lineEdit.text().strip()
-
+        
         if not rm_name and quant:
             print("invalid input!!")
         else:

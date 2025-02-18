@@ -41,6 +41,50 @@ class Curr_inventory(QMainWindow):
         self.quant_model = QStandardItemModel()
         self.min_qantity_model = QStandardItemModel()
 
+        # Synchronize scrolling
+        self.item_list.verticalScrollBar().valueChanged.connect(
+            self.qty_list.verticalScrollBar().setValue
+        )
+        self.item_list.verticalScrollBar().valueChanged.connect(
+            self.m_qty_list.verticalScrollBar().setValue
+        )
+        self.item_list.verticalScrollBar().valueChanged.connect(
+            self.price_list.verticalScrollBar().setValue
+        )
+
+
+        self.qty_list.verticalScrollBar().valueChanged.connect(
+            self.item_list.verticalScrollBar().setValue
+        )
+        self.qty_list.verticalScrollBar().valueChanged.connect(
+            self.price_list.verticalScrollBar().setValue
+        )
+        self.qty_list.verticalScrollBar().valueChanged.connect(
+            self.m_qty_list.verticalScrollBar().setValue
+        )
+
+
+        self.m_qty_list.verticalScrollBar().valueChanged.connect(
+            self.price_list.verticalScrollBar().setValue
+        )
+        self.m_qty_list.verticalScrollBar().valueChanged.connect(
+            self.item_list.verticalScrollBar().setValue
+        )
+        self.m_qty_list.verticalScrollBar().valueChanged.connect(
+            self.qty_list.verticalScrollBar().setValue
+        )
+
+
+        self.price_list.verticalScrollBar().valueChanged.connect(
+            self.qty_list.verticalScrollBar().setValue
+        )
+        self.price_list.verticalScrollBar().valueChanged.connect(
+            self.m_qty_list.verticalScrollBar().setValue
+        )
+        self.price_list.verticalScrollBar().valueChanged.connect(
+            self.item_list.verticalScrollBar().setValue
+        )
+
 
         self.show_inventory_data()
         self.change_theme()
