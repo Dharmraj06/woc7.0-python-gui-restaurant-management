@@ -115,7 +115,6 @@ class billing(QMainWindow):
         for item in bill_data:
             name = item["recipe_name"]
             price = float(item["price"])
-            qty = 1
 
             if name in item_dict:
                 item_dict[name]["qty"] += 1
@@ -127,10 +126,10 @@ class billing(QMainWindow):
 
     def update_ui_lists(self):
         for item in self.bill_items:
-            item_name = QStandardItem(str(item["name"]))  # Ensure string
-            item_qty = QStandardItem(str(item["qty"]))  # Convert integer to string
-            item_price = QStandardItem(f"₹{item['price']:.2f}")  # Format as ₹0.00
-            item_amt = QStandardItem(f"₹{item['amount']:.2f}")  # Format as ₹0.00
+            item_name = QStandardItem(str(item["name"]))
+            item_qty = QStandardItem(str(item["qty"]))
+            item_price = QStandardItem(f"₹{item['price']:.2f}")
+            item_amt = QStandardItem(f"₹{item['amount']:.2f}")
 
             self.item_model.appendRow(item_name)
             self.qty_model.appendRow(item_qty)
