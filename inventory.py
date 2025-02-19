@@ -35,9 +35,6 @@ class Inventory(QMainWindow):
         self.add_pb = self.findChild(QPushButton,"add_pb")#add items to inventory
         self.addrecipe_pb = self.findChild(QPushButton, "addrecipe_pb")#opens the recipe dialog box
 
-
-
-
         self.add_pb.clicked.connect(self.open_raw_material)
         self.curr_inven_pb.clicked.connect(self.open_inventory_data)
         self.addrecipe_pb.clicked.connect(self.open_recipe)

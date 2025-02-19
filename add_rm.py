@@ -20,7 +20,6 @@ class Add_rm(QMainWindow):
 
         self.setWindowTitle("Add Raw Material")
 
-
         self.name_le1 = self.findChild(QLineEdit, "lineEdit")
         self.name_le2 = self.findChild(QLineEdit, "lineEdit_2")
         self.name_le3 = self.findChild(QLineEdit, "lineEdit_3")
@@ -53,7 +52,7 @@ class Add_rm(QMainWindow):
                 folder_path = os.path.join(os.getcwd())
                 file_path = os.path.join(folder_path, "raw_m.json")
 
-                os.makedirs(folder_path, exist_ok=True)  # Ensure directory exists
+                os.makedirs(folder_path, exist_ok=True)
 
                 try:
                     with open(file_path, "r") as f:

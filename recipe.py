@@ -72,22 +72,17 @@ class recipe(QMainWindow):
 
         # Open (or create) the JSON file to save the data
         try:
-            # Open file in read-write mode ('r+')
+
             with open("recipe_list.json", "r+") as file:
                 try:
-                    # Load the existing data
                     existing_data = json.load(file)
                 except json.JSONDecodeError:
-                    # If the file is empty or invalid, initialize an empty list
                     existing_data = []
 
-                # Append the new recipe data
                 existing_data.append(recipe_data)
 
-                # Move the file pointer to the beginning to overwrite the file
                 file.seek(0)
 
-                # Write the updated data to the file
                 json.dump(existing_data, file, indent=4)
 
                 file.truncate()
