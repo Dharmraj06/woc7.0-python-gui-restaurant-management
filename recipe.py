@@ -71,7 +71,6 @@ class recipe(QMainWindow):
         }
 
         try:
-
             with open("recipe_list.json", "r+") as file:
                 try:
                     existing_data = json.load(file)
