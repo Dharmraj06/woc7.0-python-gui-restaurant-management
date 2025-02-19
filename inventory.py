@@ -34,7 +34,7 @@ class Inventory(QMainWindow):
         self.curr_inven_pb = self.findChild(QPushButton,"curr_inven_pb")#opens the dialog box which shows the current storage
         self.add_pb = self.findChild(QPushButton,"add_pb")#add items to inventory
         self.addrecipe_pb = self.findChild(QPushButton, "addrecipe_pb")#opens the recipe dialog box
-        self.set_thres_pb = self.findChild(QPushButton, "set_thres_pb")#used to make sure that the min amount of material is present in the inventory
+
 
 
 

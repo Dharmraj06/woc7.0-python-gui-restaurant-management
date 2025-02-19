@@ -12,8 +12,6 @@ class UI(QMainWindow):
     def __init__(self):
         super(UI, self).__init__()
 
-
-
         ui_file = "main_win.ui"
         if not os.path.exists(ui_file):
             print(f"Error: {ui_file} not found!")

@@ -4,7 +4,7 @@ from PyQt5 import uic
 from PyQt5.QtGui import QPixmap
 import os
 import json
-import shutil  # For copying image files
+import shutil
 
 class AddRestroWindow(QMainWindow):
     def __init__(self,theme):
@@ -88,10 +88,8 @@ class AddRestroWindow(QMainWindow):
         except FileNotFoundError:
             existing_data = []
 
-        # Append new restaurant restro_data
         existing_data.append(restro_data)
 
-        # Write updated restro_data back to file
         with open(file_path, "w") as f:
             json.dump(existing_data, f, indent=4)
 
