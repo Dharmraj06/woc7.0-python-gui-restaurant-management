@@ -70,7 +70,6 @@ class recipe(QMainWindow):
             "quantities": quant_m_list
         }
 
-        # Open (or create) the JSON file to save the data
         try:
 
             with open("recipe_list.json", "r+") as file:
