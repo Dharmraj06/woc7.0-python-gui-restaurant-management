@@ -23,7 +23,7 @@ class Curr_inventory(QMainWindow):
 
         self.setWindowTitle("Current Inventory")
 
-        #inheriting the widgets
+        #inheriting
         self.price_list = self.findChild(QListView,"price_list")
         self.qty_list = self.findChild(QListView,"qty_list")
         self.item_list = self.findChild(QListView,"item_list")
@@ -35,13 +35,12 @@ class Curr_inventory(QMainWindow):
         self.cancel_pb.clicked.connect(self.close)
         self.remove_pb.clicked.connect(self.remove_item)
 
-        # QStditem model
+        #model
         self.price_model = QStandardItemModel()
         self.name_model = QStandardItemModel()
         self.quant_model = QStandardItemModel()
         self.min_qantity_model = QStandardItemModel()
 
-        # Synchronize scrolling
         self.item_list.verticalScrollBar().valueChanged.connect(
             self.qty_list.verticalScrollBar().setValue
         )
@@ -101,7 +100,7 @@ class Curr_inventory(QMainWindow):
             with open(json_file, "r") as f:
                 data = json.load(f)
 
-            if not isinstance(data, list):  # Ensure it's a list of dictionaries
+            if not isinstance(data, list):
                 print("Error: Invalid JSON format!")
                 return
 
@@ -113,18 +112,15 @@ class Curr_inventory(QMainWindow):
                 quant_item = QStandardItem(item["Quant"])
                 min_quant_item = QStandardItem(item["Min Quantity"])
 
-                # adding the list as the quantity
                 if item["Quant"] < item["Min Quantity"]:
                     name_item.setForeground(QColor("red"))
                     quant_item.setForeground(QColor("red"))
 
-                #adding the items to the model
                 self.name_model.appendRow(name_item)
                 self.price_model.appendRow(price_item)
                 self.quant_model.appendRow(quant_item)
                 self.min_qantity_model.appendRow(min_quant_item)
 
-                # Setting the models on the display
                 self.item_list.setModel(self.name_model)
                 self.price_list.setModel(self.price_model)
                 self.qty_list.setModel(self.quant_model)
@@ -133,19 +129,34 @@ class Curr_inventory(QMainWindow):
         except json.JSONDecodeError:
             print("Error: Failed to decode JSON file!")
 
-
-
     def remove_item(self):
         selected_idx = self.item_list.selectedIndexes()
 
-        if selected_idx:
-            idx = selected_idx[0]
+        if not selected_idx:
+            print("No item selected!")
+            return
 
-            # Remove the row
-            self.name_model.removeRow(idx.row())
-            self.price_model.removeRow(idx.row())
-            self.quant_model.removeRow(idx.row())
-            self.min_qantity_model.removeRow(idx.row())
+        row = selected_idx[0].row()
+
+        try:
+            with open("raw_m.json", "r") as f:
+                data = json.load(f)
+
+            if 0 <= row < len(data):
+                data.pop(row)
+
+            with open("raw_m.json", "w") as f:
+                json.dump(data, f, indent=4)
+
+            self.name_model.removeRow(row)
+            self.price_model.removeRow(row)
+            self.quant_model.removeRow(row)
+            self.min_qantity_model.removeRow(row)
+
+            print("Item removed successfully")
+
+        except :
+            print("Error removing item")
 
     def change_theme(self):
 

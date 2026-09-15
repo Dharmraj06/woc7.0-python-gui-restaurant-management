@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QMainWindow, QLabel, QPushButton, QComboBox, QApplication
-from PyQt5 import uic
+import PyQt5.uic as uic
 import sys, os
 import json
 from add_restro import AddRestroWindow  # Import the AddRestroWindow class
@@ -40,7 +40,6 @@ class UI(QMainWindow):
         self.set_text()
 
         # Connect button to open the second window
-
         self.edit_det_pb.clicked.connect(self.open_add_restro_window)
         self.raw_m_pb.clicked.connect(self.open_add_raw_m_window)
         self.inven_pb.clicked.connect(self.open_inventory_window)
@@ -48,6 +47,7 @@ class UI(QMainWindow):
         self.bill_pb.clicked.connect(self.open_billing_window)
         self.theme_cb.currentTextChanged.connect(self.change_theme)
         self.theme = "light"
+
         # Show main window
         self.show()
 

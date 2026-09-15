@@ -202,5 +202,11 @@
         "Quant": "4",
         "Price": "100",
         "Min Quantity": "2"
+    },
+    {
+        "Name": "potatoes",
+        "Quant": "1",
+        "Price": "20",
+        "Min Quantity": "1"
     }
 ]

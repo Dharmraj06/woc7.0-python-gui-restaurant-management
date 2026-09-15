@@ -60,7 +60,6 @@ class recipe(QMainWindow):
         for i in range(self.quant_list_model.rowCount()):
             quant_m_list.append(self.quant_list_model.item(i).text())
 
-            # Create a dictionary to store the recipe data
         recipe_data = {
             "name": name,
             "price": price,
