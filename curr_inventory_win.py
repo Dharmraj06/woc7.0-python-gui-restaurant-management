@@ -39,6 +39,15 @@ class Curr_inventory(QMainWindow):
         assert self.cancel_pb is not None
         assert self.remove_pb is not None
 
+        item_scrollbar = self.item_list.verticalScrollBar()
+        qty_scrollbar = self.qty_list.verticalScrollBar()
+        m_qty_scrollbar = self.m_qty_list.verticalScrollBar()
+        price_scrollbar = self.price_list.verticalScrollBar()
+        assert item_scrollbar is not None
+        assert qty_scrollbar is not None
+        assert m_qty_scrollbar is not None
+        assert price_scrollbar is not None
+
         # Connect button
         self.cancel_pb.clicked.connect(self.close_window)
         self.remove_pb.clicked.connect(self.remove_item)
@@ -49,47 +58,47 @@ class Curr_inventory(QMainWindow):
         self.quant_model = QStandardItemModel()
         self.min_qantity_model = QStandardItemModel()
 
-        self.item_list.verticalScrollBar().valueChanged.connect(
-            self.qty_list.verticalScrollBar().setValue
+        item_scrollbar.valueChanged.connect(
+            qty_scrollbar.setValue
         )
-        self.item_list.verticalScrollBar().valueChanged.connect(
-            self.m_qty_list.verticalScrollBar().setValue
+        item_scrollbar.valueChanged.connect(
+            m_qty_scrollbar.setValue
         )
-        self.item_list.verticalScrollBar().valueChanged.connect(
-            self.price_list.verticalScrollBar().setValue
-        )
-
-
-        self.qty_list.verticalScrollBar().valueChanged.connect(
-            self.item_list.verticalScrollBar().setValue
-        )
-        self.qty_list.verticalScrollBar().valueChanged.connect(
-            self.price_list.verticalScrollBar().setValue
-        )
-        self.qty_list.verticalScrollBar().valueChanged.connect(
-            self.m_qty_list.verticalScrollBar().setValue
+        item_scrollbar.valueChanged.connect(
+            price_scrollbar.setValue
         )
 
 
-        self.m_qty_list.verticalScrollBar().valueChanged.connect(
-            self.price_list.verticalScrollBar().setValue
+        qty_scrollbar.valueChanged.connect(
+            item_scrollbar.setValue
         )
-        self.m_qty_list.verticalScrollBar().valueChanged.connect(
-            self.item_list.verticalScrollBar().setValue
+        qty_scrollbar.valueChanged.connect(
+            price_scrollbar.setValue
         )
-        self.m_qty_list.verticalScrollBar().valueChanged.connect(
-            self.qty_list.verticalScrollBar().setValue
+        qty_scrollbar.valueChanged.connect(
+            m_qty_scrollbar.setValue
         )
 
 
-        self.price_list.verticalScrollBar().valueChanged.connect(
-            self.qty_list.verticalScrollBar().setValue
+        m_qty_scrollbar.valueChanged.connect(
+            price_scrollbar.setValue
         )
-        self.price_list.verticalScrollBar().valueChanged.connect(
-            self.m_qty_list.verticalScrollBar().setValue
+        m_qty_scrollbar.valueChanged.connect(
+            item_scrollbar.setValue
         )
-        self.price_list.verticalScrollBar().valueChanged.connect(
-            self.item_list.verticalScrollBar().setValue
+        m_qty_scrollbar.valueChanged.connect(
+            qty_scrollbar.setValue
+        )
+
+
+        price_scrollbar.valueChanged.connect(
+            qty_scrollbar.setValue
+        )
+        price_scrollbar.valueChanged.connect(
+            m_qty_scrollbar.setValue
+        )
+        price_scrollbar.valueChanged.connect(
+            item_scrollbar.setValue
         )
 
 
