@@ -29,10 +29,13 @@ class Add_rm(QMainWindow):
         self.add_to_list_pb = self.findChild(QPushButton, "add_it_pb")
 
         #connecting..
-        self.cancel_pb.clicked.connect(self.close)
+        self.cancel_pb.clicked.connect(self._close_window)
         self.add_to_list_pb.clicked.connect(self.save_data)
 
         self.change_theme()
+
+    def _close_window(self) -> None:
+        self.close()
 
     def save_data(self):
         name1 = self.name_le1.text()
@@ -79,6 +82,6 @@ class Add_rm(QMainWindow):
     def change_theme(self):
         if self.theme == "Dark":
             self.setStyleSheet("background-color: #2E2E2E; color: white;")
-        else:  # Light theme
+        else:  # light theme
             self.setStyleSheet("background-color: white; color: black;")
 

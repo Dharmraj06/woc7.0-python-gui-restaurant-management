@@ -49,7 +49,7 @@ class AddRestroWindow(QMainWindow):
             self.selected_logo_path = file_name  # store selected image path
 
     def save_restaurant_data(self):
-        name = self.name_edit.text().strip()#strip removes the unwanted spaces
+        name = self.name_edit.text().strip()#remove the unwanted spaces
         gstin = self.gstin_edit.text().strip()
         fssai = self.fssai_edit.text().strip()
 
