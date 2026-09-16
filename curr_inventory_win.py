@@ -31,8 +31,16 @@ class Curr_inventory(QMainWindow):
         self.cancel_pb = self.findChild(QPushButton, "cancel_pb")
         self.remove_pb = self.findChild(QPushButton, "remove_pb")
 
+        # Ensure type checkers know these widgets were found before using them.
+        assert self.price_list is not None
+        assert self.qty_list is not None
+        assert self.item_list is not None
+        assert self.m_qty_list is not None
+        assert self.cancel_pb is not None
+        assert self.remove_pb is not None
+
         # Connect button
-        self.cancel_pb.clicked.connect(self.close)
+        self.cancel_pb.clicked.connect(self.close_window)
         self.remove_pb.clicked.connect(self.remove_item)
 
         #model
@@ -87,6 +95,9 @@ class Curr_inventory(QMainWindow):
 
         self.show_inventory_data()
         self.change_theme()
+
+    def close_window(self) -> None:
+        self.close()
 
 
     def show_inventory_data(self):

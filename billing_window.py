@@ -78,7 +78,7 @@ class billing(QMainWindow):
 
                 if logo_filename:
                     pixmap = QPixmap(logo_filename)
-                    scaled_pixmap = pixmap.scaled(self.logo_label.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+                    scaled_pixmap = pixmap.scaled(self.logo_label.size(), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation)
                     self.logo_label.setPixmap(scaled_pixmap)
                     self.logo_label.setScaledContents(False)
 

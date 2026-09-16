@@ -72,7 +72,7 @@ class menu(QMainWindow):
                     pixmap = QPixmap(logo_filename)
 
                     # Scale the image to fit the label size while maintaining aspect ratio
-                    scaled_pixmap = pixmap.scaled(self.logo_label.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+                    scaled_pixmap = pixmap.scaled(self.logo_label.size(),  Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation)
 
                     self.logo_label.setPixmap(scaled_pixmap)
                     self.logo_label.setScaledContents(False)
@@ -211,11 +211,13 @@ class menu(QMainWindow):
 
         except Exception as e:
             print(f"1) Error occurred while saving: {e}")
+            return
 
         if indexes:
             try:
                 for idx in indexes:
                     recipe_name = self.item_list_model.data(idx)
+                    price = None
 
                     for item in data:
                         raw_material_file = "raw_m.json"

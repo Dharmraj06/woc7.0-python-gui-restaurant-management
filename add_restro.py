@@ -26,24 +26,27 @@ class AddRestroWindow(QMainWindow):
         self.gstin_edit = self.findChild(QLineEdit, "lineEdit_2")
         self.fssai_edit = self.findChild(QLineEdit, "lineEdit_3")
 
-        self.selected_logo_path = None  # To store the selected logo path
+        self.selected_logo_path = None  # to store the selected logo path
 
         # Connect buttons
         self.add_logo_button.clicked.connect(self.add_logo)
-        self.cancel_pb.clicked.connect(self.close)
+        self.cancel_pb.clicked.connect(self.close_window)
         self.add_restro_pb.clicked.connect(self.save_restaurant_data)
 
         self.change_theme()
+
+    def close_window(self) -> None:
+        self.close()
 
     def add_logo(self):
         file_name, _ = QFileDialog.getOpenFileName(self, "Select Logo", "", "Images (*.png *.jpg *.jpeg *.bmp *.gif)")
         if file_name:
             pixmap = QPixmap(file_name)
-            scaled_pixmap = pixmap.scaled(self.logo_label.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+            scaled_pixmap = pixmap.scaled(self.logo_label.size(),  Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation)
 
             self.logo_label.setPixmap(scaled_pixmap)
             self.logo_label.setScaledContents(False)
-            self.selected_logo_path = file_name  # Store selected image path
+            self.selected_logo_path = file_name  # store selected image path
 
     def save_restaurant_data(self):
         name = self.name_edit.text().strip()#strip removes the unwanted spaces
@@ -54,12 +57,12 @@ class AddRestroWindow(QMainWindow):
             print("Error: All fields must be filled in.")
             return
 
-        # Ensure logo is selected
+        # ensure logo is selected
         if not self.selected_logo_path:
             print("Error: No logo selected.")
             return
 
-        # Create folder for storing logos
+        # create folder for storing logos
         logo_folder = os.path.join(os.getcwd(), "restro_logos")
         os.makedirs(logo_folder, exist_ok=True)
 

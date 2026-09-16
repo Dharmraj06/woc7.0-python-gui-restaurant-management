@@ -104,7 +104,7 @@ class UI(QMainWindow):
         self.theme = str(self.theme_cb.currentText())
         if self.theme == "Dark":
             self.setStyleSheet("background-color: #2E2E2E; color: white;")
-        else:  # Light theme
+        else:  # light theme
             self.setStyleSheet("background-color: white; color: black;")
 
 

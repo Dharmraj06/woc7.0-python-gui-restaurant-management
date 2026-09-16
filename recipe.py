@@ -37,7 +37,7 @@ class recipe(QMainWindow):
         # connecting the pushbuttons
         self.add_recipe_pb.clicked.connect(self.add_recipe)
         self.add_rm_pb.clicked.connect(self.add_rm)
-        self.cancel_pb.clicked.connect(self.close)
+        self.cancel_pb.clicked.connect(self._close_window)
 
         self.rm_name_model = QStandardItemModel()
         self.quant_list_model = QStandardItemModel()
@@ -47,6 +47,9 @@ class recipe(QMainWindow):
         self.change_theme()
         self.show_rm()
 
+    def _close_window(self) -> None:
+        self.close()
+
     def add_recipe(self):
         name = self.recipe_lineEdit.text().strip()
         price = self.price_lineEdit.text().strip()
@@ -55,10 +58,14 @@ class recipe(QMainWindow):
         raw_m_list = []
         quant_m_list = []
         for i in range(self.rm_name_model.rowCount()):
-            raw_m_list.append(self.rm_name_model.item(i).text())
+            item = self.rm_name_model.item(i)
+            if item is not None:
+                raw_m_list.append(item.text())
 
         for i in range(self.quant_list_model.rowCount()):
-            quant_m_list.append(self.quant_list_model.item(i).text())
+            item = self.quant_list_model.item(i)
+            if item is not None:
+                quant_m_list.append(item.text())
 
         recipe_data = {
             "name": name,
