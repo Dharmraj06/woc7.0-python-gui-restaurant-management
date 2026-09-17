@@ -1,5 +1,6 @@
 import sys
 import os
+import json
 import pytest
 from PyQt5.QtWidgets import QApplication
 
@@ -35,6 +36,9 @@ def test_save_data(win, name, quantity, price, min_quantity):
 
 
 def test_save_data_empty_field(win):
+    with open("raw_m.json", "r") as file:
+        old_data = json.load(file)
+
     win.name_le1.setText("salt")
     win.name_le2.setText("5")
     win.name_le3.setText("20")
@@ -42,4 +46,7 @@ def test_save_data_empty_field(win):
 
     win.save_data()
 
-    assert win.name_le4.text() == ""
+    with open("raw_m.json", "r") as file:
+        new_data = json.load(file)
+
+    assert new_data == old_data
